@@ -1,0 +1,245 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Montserrat:wght@400;700;800&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:wght@400;700;800&family=Syne:wght@400..800&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Inter", sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+
+  /* Accent color */
+  --color-accent-primary: #6B5FFF;
+
+  /* Define Tailwind utility names mapping directly to the CSS variable theme */
+  --color-bg-page: var(--bg-page);
+  --color-bg-card: var(--bg-card);
+  --color-bg-surface: var(--bg-surface);
+  --color-bg-border: var(--bg-border);
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-placeholder: var(--text-placeholder);
+  --color-nav-bg: var(--nav-bg);
+  --color-nav-border: var(--nav-border);
+  --color-sidebar-bg: var(--sidebar-bg);
+  --color-sidebar-text: var(--sidebar-text);
+  --color-sidebar-active-text: var(--sidebar-active-text);
+  --color-sidebar-active-bg: var(--sidebar-active-bg);
+  --color-input-bg: var(--input-bg);
+  --color-input-border: var(--input-border);
+  --color-input-text: var(--input-text);
+  --color-table-row-odd: var(--table-row-odd);
+  --color-table-row-even: var(--table-row-even);
+  --color-table-header-bg: var(--table-header-bg);
+  --color-modal-bg: var(--modal-bg);
+  --color-modal-backdrop: var(--modal-backdrop);
+  
+  --color-badge-general-bg: var(--badge-general-bg);
+  --color-badge-general-text: var(--badge-general-text);
+  --color-badge-vip-bg: var(--badge-vip-bg);
+  --color-badge-vip-text: var(--badge-vip-text);
+  --color-badge-speaker-bg: var(--badge-speaker-bg);
+  --color-badge-speaker-text: var(--badge-speaker-text);
+  --color-badge-staff-bg: var(--badge-staff-bg);
+  --color-badge-staff-text: var(--badge-staff-text);
+
+  --color-status-unused-bg: var(--status-unused-bg);
+  --color-status-unused-text: var(--status-unused-text);
+  --color-status-used-bg: var(--status-used-bg);
+  --color-status-used-text: var(--status-used-text);
+
+  --color-step-inactive-bg: var(--step-inactive-bg);
+  --color-step-inactive-text: var(--step-inactive-text);
+  --color-step-active-bg: var(--step-active-bg);
+  --color-step-active-text: var(--step-active-text);
+
+  --color-tab-inactive-text: var(--tab-inactive-text);
+  --color-tab-active-text: var(--tab-active-text);
+  --color-tab-active-border: var(--tab-active-border);
+
+  --shadow-card-shadow: var(--card-shadow);
+}
+
+:root {
+  --bg-page: #0A0A0F;
+  --bg-card: #111118;
+  --bg-surface: #1A1A24;
+  --bg-border: #2A2A38;
+  --text-primary: #F0F0F8;
+  --text-secondary: #8888A8;
+  --text-placeholder: #55556A;
+  --nav-bg: #111118;
+  --nav-border: #2A2A38;
+  --sidebar-bg: #111118;
+  --sidebar-text: #8888A8;
+  --sidebar-active-text: #F0F0F8;
+  --sidebar-active-bg: rgba(107, 95, 255, 0.15);
+  --input-bg: #111118;
+  --input-border: #2A2A38;
+  --input-text: #F0F0F8;
+  --table-row-odd: #111118;
+  --table-row-even: #0A0A0F;
+  --table-header-bg: #1A1A24;
+  --modal-bg: #1A1A24;
+  --modal-backdrop: rgba(0, 0, 0, 0.6);
+  --card-shadow: 0 2px 16px rgba(0, 0, 0, 0.3);
+  --badge-general-bg: rgba(136, 136, 168, 0.15);
+  --badge-general-text: #8888A8;
+  --badge-vip-bg: rgba(255, 181, 71, 0.15);
+  --badge-vip-text: #FFB547;
+  --badge-speaker-bg: rgba(107, 95, 255, 0.15);
+  --badge-speaker-text: #6B5FFF;
+  --badge-staff-bg: rgba(61, 214, 140, 0.15);
+  --badge-staff-text: #3DD68C;
+  --status-unused-bg: rgba(136, 136, 168, 0.15);
+  --status-unused-text: #8888A8;
+  --status-used-bg: rgba(61, 214, 140, 0.15);
+  --status-used-text: #3DD68C;
+  --step-inactive-bg: #1A1A24;
+  --step-inactive-text: #8888A8;
+  --step-active-bg: #6B5FFF;
+  --step-active-text: #FFFFFF;
+  --tab-inactive-text: #8888A8;
+  --tab-active-text: #6B5FFF;
+  --tab-active-border: #6B5FFF;
+  --scrollbar-track: #0A0A0F;
+  --scrollbar-thumb: #2A2A38;
+}
+
+[data-theme="light"] {
+  --bg-page: #F7F7FC;
+  --bg-card: #FFFFFF;
+  --bg-surface: #EEEEF6;
+  --bg-border: #DDDDE8;
+  --text-primary: #0A0A1A;
+  --text-secondary: #55556A;
+  --text-placeholder: #9999B2;
+  --nav-bg: #FFFFFF;
+  --nav-border: #DDDDE8;
+  --sidebar-bg: #EEEEF6;
+  --sidebar-text: #55556A;
+  --sidebar-active-text: #6B5FFF;
+  --sidebar-active-bg: rgba(107, 95, 255, 0.08);
+  --input-bg: #FFFFFF;
+  --input-border: #DDDDE8;
+  --input-text: #0A0A1A;
+  --table-row-odd: #FFFFFF;
+  --table-row-even: #F7F7FC;
+  --table-header-bg: #EEEEF6;
+  --modal-bg: #FFFFFF;
+  --modal-backdrop: rgba(0, 0, 0, 0.3);
+  --card-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  --badge-general-bg: rgba(85, 85, 106, 0.1);
+  --badge-general-text: #55556A;
+  --badge-vip-bg: rgba(255, 181, 71, 0.12);
+  --badge-vip-text: #B07800;
+  --badge-speaker-bg: rgba(107, 95, 255, 0.1);
+  --badge-speaker-text: #4B3FDF;
+  --badge-staff-bg: rgba(61, 214, 140, 0.1);
+  --badge-staff-text: #1A8A56;
+  --status-unused-bg: rgba(85, 85, 106, 0.1);
+  --status-unused-text: #55556A;
+  --status-used-bg: rgba(61, 214, 140, 0.12);
+  --status-used-text: #1A8A56;
+  --step-inactive-bg: #EEEEF6;
+  --step-inactive-text: #55556A;
+  --step-active-bg: #6B5FFF;
+  --step-active-text: #FFFFFF;
+  --tab-inactive-text: #55556A;
+  --tab-active-text: #6B5FFF;
+  --tab-active-border: #6B5FFF;
+  --scrollbar-track: #F7F7FC;
+  --scrollbar-thumb: #DDDDE8;
+}
+
+html, body {
+  background-color: var(--bg-page) !important;
+  color: var(--text-primary) !important;
+  font-family: var(--font-sans);
+  transition: background-color 0.15s ease, color 0.15s ease;
+}
+
+/* Beautiful Scrollbar design for premium dark/light feel */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--scrollbar-track);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--scrollbar-thumb);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-placeholder);
+}
+
+/* Base custom classes to align with styling directions */
+input, select, textarea {
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #6B5FFF;
+  box-shadow: 0 0 0 3px rgba(107, 95, 255, 0.2);
+}
+
+/* Micro animations / transitions */
+.hover-lift {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+.hover-lift:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(107, 95, 255, 0.2);
+}
+
+/* Elegant diagonal grid pattern used on card backgrounds optionally */
+.bg-grain-texture {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.15) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+[data-theme="light"] .bg-grain-texture {
+  background-image: radial-gradient(rgba(0, 0, 0, 0.05) 1px, transparent 0);
+}
+
+/* Responsive Mobile Container & Padding Override Rules */
+@media (max-width: 767px) {
+  /* Scale down any padding classes that are wider than 16px */
+  .p-5, .p-6, .p-8, .p-10, .p-12, .p-16,
+  .px-5, .px-6, .px-8, .px-10, .px-12, .px-16 {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+
+  /* Scale down any margin classes that are wider than 16px */
+  .m-5, .m-6, .m-8, .m-10, .m-12, .m-16,
+  .mx-5, .mx-6, .mx-8, .mx-10, .mx-12, .mx-16 {
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+  }
+
+  /* Specific targeting of layout containers: page wrappers, cards, panels, forms,
+     indicator/step bars, tab switchers, table containers, modal contents, and headers */
+  header,
+  nav,
+  form,
+  section,
+  .max-w-7xl,
+  .container,
+  .card,
+  .panel,
+  .step-bar,
+  .tab-switcher,
+  .table-container,
+  .modal-container,
+  .modal-content,
+  .modal-inner-content,
+  .flex-1.p-4.sm\:p-6.lg\:p-8,
+  .p-4.sm\:p-6.lg\:p-8,
+  .bg-bg-card.border.border-bg-border {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    margin-left: 0px !important;
+    margin-right: 0px !important;
+  }
+}

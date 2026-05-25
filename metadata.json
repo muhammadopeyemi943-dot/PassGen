@@ -1,0 +1,8 @@
+{
+  "name": "PassGeneration",
+  "description": "An Event QR Pass Generator. Create custom designed event passes with unique scannable QR codes for attendees, supporting CSV bulk uploads, multiple card templates, and high resolution PNG downloads.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
